@@ -125,31 +125,22 @@ Pair * searchTreeMap(TreeMap * tree, void* key)
 {
 
     if (tree == NULL || tree->root == NULL) return NULL;
-
+    TreeNode *aux = tree->root;
     
     while (tree->current != NULL)
     {
-        if (is_equal(tree, tree->current->pair->key, key) == 1)
-        {
+        if (is_equal(tree, tree->current->pair->key, key) == 1){
             return tree->current->pair;
         }
-        else
-        {
-            if (tree->lower_than(key, tree->current->pair->key) == 1)
-            {
+        else { 
+            if (tree->lower_than(key, tree->current->pair->key) == 1){
                 tree->current = tree->current->left;
             }
-            else
-            {
+            else{
                 tree->current = tree->current->right;
             }
         }
     }
-
-
-
-    
-    return NULL;
 }
 
 
