@@ -135,9 +135,11 @@ Pair * searchTreeMap(TreeMap * tree, void* key)
         else { 
             if (tree->lower_than(key, tree->current->pair->key) == 1){
                 tree->current = tree->current->left;
+                return tree->current->left;
             }
             else{
                 tree->current = tree->current->right;
+                return tree->current->right;
             }
         }
     }
