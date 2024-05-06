@@ -106,14 +106,13 @@ void insertTreeMap(TreeMap * tree, void* key, void * value)
 }
 
 TreeNode * minimum(TreeNode * x)
-{ /*
+{ 
     while (x->left != NULL)
     {
         x = x->left;
     }
     return x;
-    */
-    return NULL;
+
 }
 
 
@@ -135,10 +134,10 @@ Pair * upperBound(TreeMap * tree, void* key) {
 }
 
 Pair * firstTreeMap(TreeMap * tree) {
-    /*
+    
     if (tree == NULL || tree->root == NULL) return NULL;
-    TreeNode *aux = minimum(tree->root); */
-    return NULL;
+    TreeNode *aux = minimum(tree->root); 
+
 }
 
 Pair * nextTreeMap(TreeMap * tree) {
