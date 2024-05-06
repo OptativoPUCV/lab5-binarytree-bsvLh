@@ -129,7 +129,7 @@ Pair * searchTreeMap(TreeMap * tree, void* key)
     
     while (tree->current != NULL)
     {
-        if (is_equal(tree, tree->current->pair->key, key) == 1))
+        if (is_equal(tree, tree->current->pair->key, key) == 1)
         {
             return tree->current->pair;
         }
