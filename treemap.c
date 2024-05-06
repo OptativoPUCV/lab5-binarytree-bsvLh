@@ -137,6 +137,8 @@ Pair * firstTreeMap(TreeMap * tree) {
     
     if (tree == NULL || tree->root == NULL) return NULL;
     TreeNode *aux = minimum(tree->root); 
+    tree->current = aux;
+    return aux->pair;
 
 }
 
