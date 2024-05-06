@@ -125,7 +125,6 @@ Pair * searchTreeMap(TreeMap * tree, void* key)
 {
 
     if (tree == NULL || tree->root == NULL) return NULL;
-    TreeNode *aux = tree->root;
     
     while (tree->current != NULL)
     {
