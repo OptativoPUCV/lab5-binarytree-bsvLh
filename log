@@ -292,3 +292,18 @@ treemap.c:228:1: error: control reaches end of non-void function [-Werror=return
 cc1: all warnings being treated as errors
 Compilation failed
 bca7962
+Wed 08 May 2024 06:45:04 PM UTC: 
+ treemap.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+In file included from test.c:4:
+treemap.c: In function ‘nextTreeMap’:
+treemap.c:227:18: error: ‘TreeMap’ has no member named ‘curren’; did you mean ‘current’?
+  227 |     return tree->curren->pair;
+      |                  ^~~~~~
+      |                  current
+treemap.c:228:1: error: control reaches end of non-void function [-Werror=return-type]
+  228 | }
+      | ^
+cc1: all warnings being treated as errors
+Compilation failed
+834cb7c
