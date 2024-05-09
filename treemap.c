@@ -58,17 +58,15 @@ Pair *searchTreeMap(TreeMap *tree, void *key)
             tree->current = aux;
             return tree->current->pair;
         }
-        else 
+        else if (tree->lower_than(key, tree->current->pair->key))
         {
-            if (tree->lower_than(key, tree->current->pair->key))
-            {
-                aux = aux->left;
-            }
-            else
-            {
-                aux = aux->right;
-            }
+            aux = aux->left;
         }
+        else
+        {
+            aux = aux->right;
+        }
+        
     }
   return NULL;
 }
