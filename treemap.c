@@ -83,7 +83,7 @@ void insertTreeMap(TreeMap *tree, void *key, void *value) {
         aux->left = node;
         node->parent = aux;
         tree->current = node;
-        return:
+        return;
       }
     } else {
       if (aux->right)
@@ -92,7 +92,7 @@ void insertTreeMap(TreeMap *tree, void *key, void *value) {
         aux->right = node;
         node->parent = aux;
         tree->current = node;
-        return:
+        return;
       }
     }
   }
