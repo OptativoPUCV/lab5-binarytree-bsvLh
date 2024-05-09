@@ -423,3 +423,38 @@ test.c:503:5: error: ‘main’ defined but not used [-Werror=unused-function]
 cc1: all warnings being treated as errors
 Compilation failed
 c26c4bc
+Thu 09 May 2024 08:04:40 AM UTC: 
+ treemap.c | 1 +
+ 1 file changed, 1 insertion(+)
+In file included from test.c:4:
+treemap.c: In function ‘insertTreeMap’:
+treemap.c:74:47: error: expected ‘,’ or ‘;’ before ‘TreeNode’
+   74 |   TreeNode *node = createTreeNode(key, value) TreeNode *aux = tree->root;
+      |                                               ^~~~~~~~
+treemap.c:86:15: error: expected expression before ‘:’ token
+   86 |         return:
+      |               ^
+treemap.c:86:15: error: ‘return’ with a value, in function returning void [-Werror=return-type]
+treemap.c:72:6: note: declared here
+   72 | void insertTreeMap(TreeMap *tree, void *key, void *value) {
+      |      ^~~~~~~~~~~~~
+treemap.c:95:15: error: expected expression before ‘:’ token
+   95 |         return:
+      |               ^
+treemap.c:95:15: error: ‘return’ with a value, in function returning void [-Werror=return-type]
+treemap.c:72:6: note: declared here
+   72 | void insertTreeMap(TreeMap *tree, void *key, void *value) {
+      |      ^~~~~~~~~~~~~
+test.c:503:5: error: ‘main’ is normally a non-static function [-Werror=main]
+  503 | int main( int argc, char *argv[] ) {
+      |     ^~~~
+test.c:606:1: error: expected declaration or statement at end of input
+  606 | }
+      | ^
+At top level:
+test.c:503:5: error: ‘main’ defined but not used [-Werror=unused-function]
+  503 | int main( int argc, char *argv[] ) {
+      |     ^~~~
+cc1: all warnings being treated as errors
+Compilation failed
+b74db11
