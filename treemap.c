@@ -166,20 +166,11 @@ Pair *upperBound(TreeMap *tree, void *key) {
     else if (tree->lower_than(tree->current->pair->key, key)) 
     {
         tree->current = tree->current->right;
-
     } 
     else
     {
         return tree->current->pair;
     }
-  }
-  if (aux != NULL) 
-  {
-    return aux->pair;
-  } 
-  else
-  {
-    return NULL;
   }
 }
 

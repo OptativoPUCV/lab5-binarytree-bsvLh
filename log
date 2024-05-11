@@ -561,3 +561,17 @@ Sat 11 May 2024 09:14:24 PM UTC:
  tests:  22|2
 total_score: 45/70
 928e871
+Sat 11 May 2024 09:16:13 PM UTC: 
+ treemap.c | 8 --------
+ 1 file changed, 8 deletions(-)
+In file included from test.c:4:
+treemap.c: In function ‘upperBound’:
+treemap.c:158:13: error: variable ‘aux’ set but not used [-Werror=unused-but-set-variable]
+  158 |   TreeNode *aux = NULL;
+      |             ^~~
+treemap.c:175:1: error: control reaches end of non-void function [-Werror=return-type]
+  175 | }
+      | ^
+cc1: all warnings being treated as errors
+Compilation failed
+067af56
