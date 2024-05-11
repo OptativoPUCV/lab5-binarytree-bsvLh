@@ -172,6 +172,14 @@ Pair *upperBound(TreeMap *tree, void *key) {
         return tree->current->pair;
     }
   }
+    if (aux != NULL) 
+    {
+        return aux->pair;
+    } 
+    else
+    {
+        return NULL;
+    }
 }
 
 Pair *firstTreeMap(TreeMap *tree) {
