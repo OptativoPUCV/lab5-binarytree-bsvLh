@@ -120,8 +120,8 @@ void removeNode(TreeMap *tree, TreeNode *node)
                 node->parent->right = NULL;
             }
         }
-        free(node);
         free(node->pair);
+        free(node);
     }
     else if ((node->right == NULL || node->left == NULL))
     {
@@ -150,8 +150,8 @@ void removeNode(TreeMap *tree, TreeNode *node)
             node->parent->right = aux;
             aux->parent = node->parent;
         }
-        free(node);
         free(node->pair);
+        free(node);
     }
 
     else
