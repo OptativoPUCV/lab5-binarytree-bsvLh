@@ -152,10 +152,11 @@ void eraseTreeMap(TreeMap *tree, void *key) {
   removeNode(tree, node);
 }
 
-Pair *upperBound(TreeMap *tree, void *key) {
-
-  if (tree == NULL || tree->root == NULL) return NULL;
-  TreeNode *aux = NULL;
+Pair *upperBound(TreeMap *tree, void *key)
+{
+    if (tree == NULL || tree->root == NULL) return NULL;
+    TreeNode *aux = NULL;
+    tree->current = tree->root;
   while (tree->current != NULL) 
   {
     if ((tree->lower_than(key, tree->current->pair->key))) 
